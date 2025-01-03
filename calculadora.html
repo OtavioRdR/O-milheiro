@@ -6,6 +6,7 @@
     <title>Calculadora de Milheiro</title>
     <link rel="stylesheet" href="styles.css">
     <script defer src="script.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.4.0/jspdf.umd.min.js"></script>
 </head>
 <body>
     <header>
@@ -15,22 +16,29 @@
                 <li><a href="index.html">Início</a></li>
                 <li><a href="sobre.html">Sobre</a></li>
                 <li><a href="contato.html">Contato</a></li>
+                <li>
+                    <label class="switch">
+                        <input type="checkbox" id="darkModeSwitch">
+                        <span class="slider"></span>
+                    </label>
+                </li>
             </ul>
         </nav>
     </header>
-
+    
     <section class="container">
         <h2>Calcule seu custo</h2>
         <label for="milhasMensais">Milhas mensais:</label>
         <input type="number" id="milhasMensais" placeholder="Ex.: 5000">
         <label for="custoMensal">Custo mensal (R$):</label>
         <input type="number" id="custoMensal" placeholder="Ex.: 154.90">
-        <button onclick="calcularMilheiro()">Calcular</button>
+        <button onclick="calcularMilheiro(); gerarPDF();">Calcular e Gerar PDF</button>
         <h3 id="resultado"></h3>
     </section>
-
+    
     <footer>
         <p>&copy; 2025 MilheiroPro</p>
     </footer>
-</body>
-</html>
+    </body>
+    </html>
+    

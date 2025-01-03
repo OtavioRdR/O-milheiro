@@ -3,8 +3,8 @@
 :root {
     --bg-color: #0d0d0d;
     --text-color: #ffffff;
-    --primary-color: #ff00ff;
-    --secondary-color: #00ffff;
+    --primary-color: #ff9900; /* Cor laranja */
+    --secondary-color: #f4a460; /* Cor areia */
 }
 
 body {
@@ -12,7 +12,12 @@ body {
     background-color: var(--bg-color);
     color: var(--text-color);
     text-align: center;
-    transition: backgr 0.3s, color 0.3s;
+    transition: background 0.3s, color 0.3s;
+}
+
+img {
+    height: 200px;
+    border-radius: 60%;
 }
 
 header {
@@ -45,6 +50,21 @@ a {
     margin: 50px auto;
     border-radius: 10px;
     box-shadow: 0 0 15px var(--primary-color);
+    text-align: left; /* Alinha os textos à esquerda */
+}
+
+label, input {
+    display: block;
+    width: 100%;
+    margin: 10px 0;
+}
+
+input {
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    background: rgba(255, 255, 255, 0.3);
+    color: var(--text-color);
 }
 
 button {
@@ -92,7 +112,7 @@ footer {
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: #ddd;
+    background-color: #dfe0d0;
     border-radius: 34px;
     transition: 0.4s;
 }
@@ -110,7 +130,7 @@ footer {
 }
 
 input:checked + .slider {
-    background-color: #ff00ff;
+    background-color: var(--primary-color);
 }
 
 input:checked + .slider:before {
@@ -119,10 +139,10 @@ input:checked + .slider:before {
 
 /* Dark Mode */
 .dark-mode {
-    --bg-color: #1a1a1a;
-    --text-color: #ffffff;
-    --primary-color: #ff00ff;
-    --secondary-color: #00ffff;
+    --bg-color: #ffffff;
+    --text-color: #000000;
+    --primary-color: #ff9900; /* Cor laranja */
+    --secondary-color: #f4a460; /* Cor areia */
 }
 
 /* Ajustes para telas menores */
@@ -143,5 +163,10 @@ input:checked + .slider:before {
     button {
         width: 100%;
         font-size: 1em;
+    }
+
+    header img.logo {
+        width: 50px; /* Tamanho menor da logo em dispositivos móveis */
+        height: auto;
     }
 }
