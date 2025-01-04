@@ -4,14 +4,33 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MilheiroPro - Home</title>
-    <link rel="stylesheet" href="styles.css">
-    <script defer src="script.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.4.0/jspdf.umd.min.js"></script>
+    <link rel="stylesheet" href="css/styles.css">
+    <script defer src="js/script.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-auth.js"></script>
+    <script>
+    import { initializeApp } from "firebase/app";
+    import { getAnalytics } from "firebase/analytics";
+
+    const firebaseConfig = {
+        apiKey: "AIzaSyAP9mrHd4jwOZWfJNO1UxX3_lf2VXEtgEk",
+        authDomain: "o-milheir0.firebaseapp.com",
+        projectId: "o-milheir0",
+        storageBucket: "o-milheir0.firebasestorage.app",
+        messagingSenderId: "674343369715",
+        appId: "1:674343369715:web:47a03175141291327e3086",
+        measurementId: "G-RJ86YW0151"
+};
+
+        const app = initializeApp(firebaseConfig);
+        const analytics = getAnalytics(app);
+
+    </script>
 </head>
 <body>
     <header>
-        <img src="assets/logo redonda para site de milhas chamado Milheiros com um avião e fundo branco.png" alt="Logo Milheiros" class="logo">
-        <h1> MilheiroPro ✈️</h1>
+        <img src="assets/logo_simples_e_moderno_para_Milheiros_com_tema_de_aviação__apenas_contorno-removebg-preview.png" alt="Logo Milheiros" class="logo">
+        <h1>MilheiroPro</h1>
         <nav>
             <ul>
                 <li><a href="index.html">Início</a></li>
@@ -27,13 +46,11 @@
             </ul>
         </nav>
     </header>
-
     <section class="hero">
         <h2>Transforme seus pontos em dinheiro!</h2>
         <p>Calcule o custo do milheiro e aproveite os melhores preços.</p>
         <a href="calculadora.html" class="btn">Começar</a>
     </section>
-
     <footer>
         <p>&copy; 2025 MilheiroPro</p>
     </footer>

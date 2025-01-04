@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Calculadora de Milheiro</title>
-    <link rel="stylesheet" href="styles.css">
-    <script defer src="script.js"></script>
+    <link rel="stylesheet" href="css/styles.css">
+    <script defer src="js/script.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.4.0/jspdf.umd.min.js"></script>
 </head>
 <body>
@@ -25,20 +25,27 @@
             </ul>
         </nav>
     </header>
-    
     <section class="container">
         <h2>Calcule seu custo</h2>
-        <label for="milhasMensais">Milhas mensais:</label>
+        <label for="milhasMensais">Milhas mensais no clube de milhas:</label>
         <input type="number" id="milhasMensais" placeholder="Ex.: 5000">
+    
         <label for="custoMensal">Custo mensal (R$):</label>
         <input type="number" id="custoMensal" placeholder="Ex.: 154.90">
-        <button onclick="calcularMilheiro(); gerarPDF();">Calcular e Gerar PDF</button>
+    
+        <label for="bonusMilhas">Bônus de Milhas Anual:</label>
+        <input type="number" id="bonusMilhas" placeholder="Ex.: 200">
+    
+        <!-- Botões separados -->
+        <button onclick="calcularMilheiro();">Calcular</button>
+        <button onclick="gerarPDF();">Gerar PDF</button>
+    
         <h3 id="resultado"></h3>
+        <h3 id="totalAnual"></h3>
     </section>
     
     <footer>
         <p>&copy; 2025 MilheiroPro</p>
     </footer>
-    </body>
-    </html>
-    
+</body>
+</html>
