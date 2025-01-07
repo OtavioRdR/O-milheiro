@@ -33,7 +33,7 @@ function calcularMilheiro() {
     let custoMilheiro = (custoAnual / (milhasAnuais / 1000)).toFixed(2);
 
     document.getElementById("resultado").innerHTML = `Custo do Milheiro: <strong>R$ ${custoMilheiro}</strong>`;
-    document.getElementById("totalAnual").innerHTML = milhasAnuais; // Mantendo um valor numérico puro
+    document.getElementById("totalAnual").innerHTML = `Valor total de milhas anual: <strong>${milhasAnuais}</strong>`; // Mantendo um valor numérico puro
 
     return milhasAnuais; // Retorna o valor para reutilização
 }
