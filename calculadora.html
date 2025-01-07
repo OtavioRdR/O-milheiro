@@ -25,8 +25,10 @@
             </ul>
         </nav>
     </header>
+
     <section class="container">
         <h2>Calcule seu custo</h2>
+        
         <label for="milhasMensais">Milhas mensais no clube de milhas:</label>
         <input type="number" id="milhasMensais" placeholder="Ex.: 5000">
     
@@ -35,15 +37,34 @@
     
         <label for="bonusMilhas">Bônus de Milhas Anual:</label>
         <input type="number" id="bonusMilhas" placeholder="Ex.: 200">
-    
-        <!-- Botões separados -->
+
         <button onclick="calcularMilheiro();">Calcular</button>
         <button onclick="gerarPDF();">Gerar PDF</button>
     
         <h3 id="resultado"></h3>
         <h3 id="totalAnual"></h3>
     </section>
-    
+
+    <!-- Nova Aba Transferência Bonificada -->
+    <section class="container">
+        <h2>Transferência Bonificada</h2>
+
+        <label for="quantidadeBonus">Quantidade de bônus para transferência:</label>
+        <input type="number" id="quantidadeBonus" placeholder="Ex.: 10000">
+
+        <label for="bonusInput">Qual o bônus (%):</label>
+        <input type="number" id="bonusInput" placeholder="Ex.: 100">
+
+        <h3>Total de Milhas Ganhas: <span id="totalMilhas"></span></h3>
+        <h3>Custo Geral Final: <span id="custoFinal"></span></h3>
+        <h3>Milhas Acumuladas no Ano + Total de Milhas Ganhas: <span id="milhasAcumuladas"></span></h3>
+        <h3>Custo Total Clube Milhas + Clube Cartão: <span id="custoTotalClube"></span></h3>
+        <h3>Custo Anual Clube Milhas: <span id="custoAnual"></span></h3>
+        <h3>Custo Mensal Clube Milhas: <span id="custoMensalClube"></span></h3>
+
+        <button onclick="calcularTransferenciaBonificada();">Calcular Transferência</button>
+    </section>
+
     <footer>
         <p>&copy; 2025 MilheiroPro</p>
     </footer>
